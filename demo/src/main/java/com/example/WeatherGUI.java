@@ -60,7 +60,7 @@ public class WeatherGUI {
 
         StringBuilder weatherInfo = new StringBuilder();
         weatherInfo.append("Weather for: ").append(city).append("\n\n");
-        weatherInfo.append("Day 2 Night Temperature: ").append(weather.getDay2().getNight().getTemperature()).append("\n");
+        weatherInfo.append("Day 2 Night Temperature: ").append(weather.getDay(3).getNight().getTemperature()).append("\n");
 
         weatherTextArea.setText(weatherInfo.toString());
     }
