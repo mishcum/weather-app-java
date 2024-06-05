@@ -6,6 +6,7 @@ public class TimeOfDay {
 
     private final String time;
     private final String temperature;
+    private final String condition;
     private final String feeling;
     private final String pressure;
     private final String humidity;
@@ -13,9 +14,10 @@ public class TimeOfDay {
     private final String uv;
     private final String chanceOfPrecip;
 
-    public TimeOfDay(Element time, Element temperature, Element feeling, Element pressure, Element humidity, Element wind, Element uv, Element chanceOfPrecip) {
+    public TimeOfDay(Element time, Element temperature, Element condition, Element feeling, Element pressure, Element humidity, Element wind, Element uv, Element chanceOfPrecip) {
         this.time = time.text();
         this.temperature = temperature.text();
+        this.condition = condition.text();
         this.feeling = feeling.text();
         this.pressure = pressure.text();
         this.humidity = humidity.text();
@@ -26,6 +28,7 @@ public class TimeOfDay {
 
     public String getTime() { return time; }
     public String getTemperature() { return temperature; }
+    public String getCondition() { return condition; }
     public String getFeeling() { return feeling; }
     public String getPressure() { return pressure; }
     public String getHumidity() { return humidity; }

@@ -11,18 +11,19 @@ public class Day {
     private final TimeOfDay noon;
     private final TimeOfDay evening;
 
-    public Day(Element date, Elements time, Elements temperature, Elements feeling, Elements other) {
+    public Day(Element date, Elements time, Elements temperature, Elements conditions, Elements feeling, Elements other) {
         this.date = date.text();
-        this.night = createTimeOfDay(time, temperature, feeling, other, 0);
-        this.morning = createTimeOfDay(time, temperature, feeling, other, 1);
-        this.noon = createTimeOfDay(time, temperature, feeling, other, 2);
-        this.evening = createTimeOfDay(time, temperature, feeling, other, 3);
+        this.night = createTimeOfDay(time, temperature, conditions, feeling, other, 0);
+        this.morning = createTimeOfDay(time, temperature, conditions, feeling, other, 1);
+        this.noon = createTimeOfDay(time, temperature, conditions, feeling, other, 2);
+        this.evening = createTimeOfDay(time, temperature, conditions, feeling, other, 3);
     }
 
-    private TimeOfDay createTimeOfDay(Elements time, Elements temperature, Elements feeling, Elements other, int index) {
+    private TimeOfDay createTimeOfDay(Elements time, Elements temperature, Elements conditions, Elements feeling, Elements other, int index) {
         return new TimeOfDay(
                 time.get(index),
                 temperature.get(index),
+                conditions.get(index),
                 feeling.get(index),
                 other.get(index * 5),
                 other.get(index * 5 + 1),
