@@ -39,8 +39,4 @@ public class Parser {
         Elements pressure = page.select("span[class=link__text]");
         return pressure;
     }
-
-    /*public static void main(String[] args) throws IOException {
-        System.out.println(new Parser("moskva").page.toString());
-    }*/
 }

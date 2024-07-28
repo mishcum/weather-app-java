@@ -1,7 +1,7 @@
 com/example/WeatherGUI$1.class
-com/example/WeatherGUI$2.class
+com/example/CityNames.class
 com/example/TimeOfDay.class
 com/example/Day.class
 com/example/WeatherGUI.class
 com/example/Weather.class
-com/example/parseWeather.class
+com/example/Parser.class
